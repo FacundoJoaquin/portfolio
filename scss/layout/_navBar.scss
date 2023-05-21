@@ -1,0 +1,39 @@
+.navBar{
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 16%;
+        background-color: $gris;
+        font-family: $tipo-1;
+        font-weight: 600;
+        overflow: hidden;
+        display: flex;
+    @include column;
+        .img-container {
+            margin-top: 80px;
+            img {
+                border-radius: 50%;
+                max-width: 100%;
+                height: auto;
+            }
+        }
+        ul {
+            margin-top: 50px;
+            list-style: none;
+            @include column;
+            li {
+                margin-bottom: 20px;
+                :hover{
+                    color: $fuerte;
+                    font-weight: 700;
+                    font-size: 18px;
+                    transition: .2s;
+                }
+                    a{
+                        text-decoration: none;
+                        color: #000;
+                    }
+            }
+        }
+}

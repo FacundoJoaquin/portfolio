@@ -1,0 +1,136 @@
+.facundo {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    grid-template-areas:
+        "empty empty empty"
+        "name name name"
+        "front front front"
+        "welcome welcome welcome"
+        "links links .";
+
+    .empty {
+        grid-area: empty;
+    }
+
+    h1 {
+        margin-left: 50px;
+        grid-area: name;
+        font-size: 50px;
+        font-family: $tipo-2;
+
+        .lastname {
+            color: $medio
+        }
+    }
+
+    .container-fe {
+        margin-left: 50px;
+        grid-area: front;
+        font-size: 25px;
+        font-weight: 500;
+        font-family: $tipo-2;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        width: 700px;
+        z-index: 1;
+
+        p {
+            margin-right: 5px;
+        }
+
+        .container-animacion {
+            display: flex;
+        }
+
+        .barra {
+            width: 3px;
+            height: 20px;
+            margin-left: 1px;
+            background-color: #181818;
+            animation: barra-animacion 1s ease infinite;
+        }
+    }
+
+    .welcome {
+        margin-left: 50px;
+        grid-area: welcome;
+
+        :first-child {
+            font-family: $tipo-1;
+            font-weight: bold;
+            font-size: 25px;
+
+            span {
+                font-family: $tipo-2;
+                font-size: 25px;
+                color: $medio;
+            }
+        }
+
+        :last-child {
+            font-family: $tipo-2;
+            color: #181818;
+            font-size: 20px;
+
+            .aMail {
+                font-size: 20px;
+                font-family: $tipo-2;
+            }
+        }
+
+        .aMail:hover {
+            color: $medio;
+        }
+    }
+} // termina section facundo
+
+.links {
+    margin-left: 50px;
+    grid-area: links;
+    display: flex;
+    gap: 20px;
+
+    button {
+        background-color: transparent;
+        height: 35px;
+        width: 150px;
+        border: 1px solid $fuerte;
+        border-radius: 10px;
+
+        span {
+            font-family: $tipo-1;
+            font-weight: 700;
+            font-size: 16px;
+        }
+    }
+
+    button:hover {
+        background-color: $fuerte;
+
+        span {
+            color: white;
+        }
+    }
+
+    .img-links {
+        :hover {
+            transform: scale(1.1);
+        }
+    }
+
+    img {
+        width: 40px;
+        height: 40px;
+    }
+} //terminan los links
+
+@keyframes barra-animacion {
+    50% {
+        height: 30px;
+    }
+}

@@ -1,0 +1,58 @@
+.proyectos {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    h2 {
+        margin-left: 50px;
+        font-size: 50px;
+        font-family: $tipo-2;
+    }
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+    .card {
+        overflow: hidden;
+        height: 350px;
+        width: 300px;
+        border: 1px solid $gris;
+
+        div {
+            h3 {
+                font-family: $tipo-1;
+                text-align: center;
+            }
+
+            p {
+                font-family: $tipo-1;
+                text-align: center;
+                font-weight: 600;
+            }
+
+            .tecnologias {
+                display: flex;
+                justify-content: space-around;
+                margin: 10px 0 15px;
+
+                .html {
+                    @include html;
+                }
+            }
+
+            .css {
+                @include css;
+            }
+
+            .js {
+                @include js;
+            }
+            .icons {
+                display: flex;
+                justify-content: center;
+                gap: 15px;
+            }
+        }
+    }
+}
+}
