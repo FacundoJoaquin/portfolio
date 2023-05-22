@@ -13,17 +13,16 @@
         .img-container {
             margin-top: 80px;
             img {
-                border-radius: 50%;
                 max-width: 100%;
                 height: auto;
             }
         }
         ul {
-            margin-top: 50px;
+            margin-top: 10px;
             list-style: none;
             @include column;
             li {
-                margin-bottom: 20px;
+                margin: 10px 0 20px;
                 :hover{
                     color: $fuerte;
                     font-weight: 700;

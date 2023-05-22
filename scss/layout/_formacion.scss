@@ -1,0 +1,89 @@
+.formacion {
+    background-color: $gris;
+    height: 100vh;
+    margin-left: 16%;
+        .empty {
+            height: 140px;
+        }
+        h2 {
+            font-family: $tipo-2;
+            font-size: 50px;
+            margin-left: 50px;
+            margin-bottom: 40px;
+                span {
+                    color: $medio;
+                }
+        }
+        h3 {
+            margin-left: 50px;
+            font-family: $tipo-1;
+        }
+        .tools {
+            @include scss;
+            margin-left: 50px;
+            margin-bottom: 20px;
+                p{
+                    font-weight: 600;
+                }
+        }
+        .ft {
+            margin-left: 50px;
+            margin-bottom: 20px;
+            display: flex;
+            gap: 5px;
+            .htmlf{
+                @include html;
+                p{
+                    font-weight: 600;
+                }
+            }
+            .cssf {
+                @include css;
+                p{
+                    font-weight: 600;
+                }
+            }
+            .jsf {
+                @include js;
+                p{
+                    font-weight: 600;
+                }
+            }
+
+        }
+        .frameworks {
+            margin-bottom: 20px;
+            margin-left: 50px;
+            display: flex;
+            gap: 10px;
+            .bootstrap {
+                @include bst;
+                p{
+                    font-family: $tipo-1;
+                    font-weight: 600;
+                }
+            }
+            .tailwind {
+                @include tw;
+                p{
+                    font-family: $tipo-1;
+                    font-weight: 600;
+                }
+            }
+        }
+        .certif {
+            display: flex;
+            gap: 10px;
+            margin-left: 50px;
+            margin-bottom: 20px;
+            @include button;
+}
+        .futuro {
+            margin-left: 50px;
+            margin-bottom: 30px;
+            p {
+                font-family: $tipo-2;
+                font-size: 18px;
+            }
+        }
+}
